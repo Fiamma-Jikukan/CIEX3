@@ -5,6 +5,7 @@ Objective function classes
 """
 import numpy as np
 
+
 class ObjectiveFunction:
     """
     Base class for various objective functions.
@@ -36,6 +37,8 @@ class ObjectiveFunction:
         """
         if self.best_eval is None or evals.min() < self.best_eval:
             self.best_eval = evals.min()
+
+
 #
 class MixedVarsEllipsoid(ObjectiveFunction):
     """
@@ -63,19 +66,24 @@ class MixedVarsEllipsoid(ObjectiveFunction):
         self.eval_count += len(X)
         evals = np.full(len(X), np.nan)
         for k in range(len(X)):
-            y = np.array([X[k, i] for i in range(0, self.N)])  #Real-Valued sub-vector
-            z = np.array([np.round(X[k, i]) for i in range(self.N, self.d)]) #Integers sub-vector; rounding is enforced
+            y = np.array([X[k, i] for i in range(0, self.N)])  # Real-Valued sub-vector
+            z = np.array(
+                [np.round(X[k, i]) for i in range(self.N, self.d)])  # Integers sub-vector; rounding is enforced
             xc = np.concatenate((y, z))
-            evals[k] = (np.array(xc - c0).dot(self.H).dot(np.array(xc - c0))) / self.c # The normalized 
+            evals[k] = (np.array(xc - c0).dot(self.H).dot(np.array(xc - c0))) / self.c  # The normalized
         self._update_best_eval(evals)
         return evals
+
+
 #
 #
 #
 """
 Eliipsoids' center generation as a global variable c0
 """
-def setC(dim: int, alpha0: int = 7, trans: int=0):
+
+
+def setC(dim: int, alpha0: int = 7, trans: int = 0):
     global c0
     c0 = trans + np.array([alpha0, -alpha0] * dim)
 
