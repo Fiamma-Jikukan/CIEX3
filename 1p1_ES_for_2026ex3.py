@@ -63,13 +63,16 @@ if __name__ == "__main__":
     #
     dimension = [10, 30, 80]
     conditioning = [1, 100, 10000]
-    #
+    best_scores = {}  # Dictionary to store best scores for each (dim, cond) combination
+    
     for dim in dimension:
         N = dim // 2
         setC(N)
         #
         for c in conditioning:
             print(f"\nRunning: Dim={dim}, Cond={c}")
+            best_score_key = f"dim{dim}_cond{c}"
+            best_scores[best_score_key] = float('inf')  # Initialize with infinity
 
             # Setup the objective function
             H = eval(f'Efunc.{funcName}')(dim, c)
@@ -82,6 +85,19 @@ if __name__ == "__main__":
                 # Post-process: Round the integer components (the first N variables)
                 xx = np.array([xmin[i] if i < N else np.round(xmin[i]) for i in range(len(xmin))])
                 fmin_scalar = np.array(fmin).item()
-                print(f"  Run {k}: fmin = {fmin_scalar:.4e} | Evals = {len(fhistory)}")
+                
+                # Update best score for this (dim, cond) combination
+                if fmin_scalar < best_scores[best_score_key]:
+                    best_scores[best_score_key] = fmin_scalar
+                
+                print(f"  Run {k}: fmin = {fmin_scalar:.4e} | Evals = {len(fhistory)} | Best so far = {best_scores[best_score_key]:.4e}")
+
+    # Print final best scores for all 9 runs
+    print("\n" + "="*50)
+    print("FINAL BEST SCORES FOR EACH OF THE 9 RUNS:")
+    print("="*50)
+    for key, score in best_scores.items():
+        print(f"{key}: {score:.4e}")
+    print("="*50)
 
     # //// EOF ////
