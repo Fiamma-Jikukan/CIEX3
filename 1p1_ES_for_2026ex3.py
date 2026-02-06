@@ -15,8 +15,7 @@ def OnePlusOneEvolutionStrategy(n, lb, ub, maxEvals, func=lambda x: x.dot(x), fs
     local_state = np.random.RandomState(seed)
     fhistory, shistory = [], []
     xmin = local_state.uniform(size=n) * (ub - lb) + lb
-    fmin = func(
-        xmin.reshape(1, -1))  # reshape since it is a singleton and func receives a population in a 2D numpy array
+    fmin = func(xmin.reshape(1, -1))  # reshape since it is a singleton and func receives a population in a 2D numpy array
     fhistory.append(fmin)
     sigma = (ub - lb) / 6.0
     shistory.append(sigma)
@@ -26,8 +25,7 @@ def OnePlusOneEvolutionStrategy(n, lb, ub, maxEvals, func=lambda x: x.dot(x), fs
     k_sigma = 0.827
     while (evalcount < maxEvals and fmin > fstop + tol):
         x = xmin + sigma * local_state.normal(size=n)
-        f_x = func(
-            x.reshape(1, -1))  # reshape since it is a singleton and func receives a population in a 2D numpy array
+        f_x = func(x.reshape(1, -1))  # reshape since it is a singleton and func receives a population in a 2D numpy array
         evalcount += 1
         if f_x < fmin:
             xmin = np.copy(x)
