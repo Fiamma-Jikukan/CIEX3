@@ -12,16 +12,11 @@ import ellipsoidFunctions as Efunc
 
 
 def vector_handling(vec):
-    """
-    cuts vector into two halfs and send each half to the corresponding function
-    """
-    half_size = len(vec)//2
+    half_size = len(vec) // 2
     real_half = vec[:half_size]
     discrete_half = vec[half_size:]
-    print(real_half.shape, discrete_half.shape)
     discrete_half_round = np.round(discrete_half)
-    return real_half_handle(real_half) + discrete_half_handle(discrete_half_round)
-
+    return np.concatenate((real_half_handle(real_half), discrete_half_handle(discrete_half_round)))
 
 def discrete_half_handle(vec_half):
     size = len(vec_half)
