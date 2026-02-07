@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-@author: ofersh@telhai.ac.il
-(1+1)-Evolution Strategy with the 1/5th success-rule initialized within [lb,ub]**n
-The objective function evaluation calls are adjusted to the ObjectiveFunctoin interface.
-"""
+
 import numpy as np
 import pandas as pd
 from MixedVariableObjectiveFunctions import setC
@@ -11,34 +6,11 @@ import MixedVariableObjectiveFunctions as f_mixed
 import ellipsoidFunctions as Efunc
 
 
-def vector_handling(vec):
-    """
-    cuts vector into two halfs and send each half to the corresponding function
-    """
-    half_size = len(vec)//2
-    real_half = vec[:half_size]
-    discrete_half = vec[half_size:]
-    print(real_half.shape, discrete_half.shape)
-    discrete_half_round = np.round(discrete_half)
-    return real_half_handle(real_half) + discrete_half_handle(discrete_half_round)
-
-
-def discrete_half_handle(vec_half):
-    size = len(vec_half)
-    local_state = np.random.RandomState(abs(round(vec_half[0])))
-    return vec_half * local_state.geometric(0.5, size=size)
-
-def real_half_handle(vec_half):
-    size = len(vec_half)
-    local_state = np.random.RandomState(abs(round(vec_half[0])))
-    return vec_half * local_state.normal(size=size)
-
-def OnePlusOneEvolutionStrategy_mixed(n, lb, ub, maxEvals, func=lambda x: x.dot(x), fstop=0, seed=None):
+def OnePlusOneEvolutionStrategy(n, lb, ub, maxEvals, func=lambda x: x.dot(x), fstop=0, seed=None):
     local_state = np.random.RandomState(seed)
     fhistory, shistory = [], []
     xmin = local_state.uniform(size=n) * (ub - lb) + lb
-    fmin = func(
-        xmin.reshape(1, -1))  # reshape since it is a singleton and func receives a population in a 2D numpy array
+    fmin = func(xmin.reshape(1, -1))  # reshape since it is a singleton and func receives a population in a 2D numpy array
     fhistory.append(fmin)
     sigma = (ub - lb) / 6.0
     shistory.append(sigma)
@@ -47,12 +19,11 @@ def OnePlusOneEvolutionStrategy_mixed(n, lb, ub, maxEvals, func=lambda x: x.dot(
     epoch = 50
     k_sigma = 0.827
     while (evalcount < maxEvals and fmin > fstop + tol):
-        x = xmin + sigma
-        x_handled = vector_handling(x)
-        f_x = func(x_handled.reshape(1, -1))  # reshape since it is a singleton and func receives a population in a 2D numpy array
+        x = xmin + sigma * local_state.normal(size=n)
+        f_x = func(x.reshape(1, -1))  # reshape since it is a singleton and func receives a population in a 2D numpy array
         evalcount += 1
         if f_x < fmin:
-            xmin = np.copy(x_handled)
+            xmin = np.copy(x)
             fmin = f_x
             osuccess += 1
         if (np.mod(evalcount, epoch) == 0):  # 1/5th success-rule every epoch
@@ -86,7 +57,7 @@ if __name__ == "__main__":
     dimension = [10, 30, 80]
     conditioning = [1, 100, 10000]
     best_scores = {}  # Dictionary to store best scores for each (dim, cond) combination
-
+    
     for dim in dimension:
         N = dim // 2
         setC(N)
@@ -102,25 +73,24 @@ if __name__ == "__main__":
 
             for k in range(NRUNS):
                 # Execute (1+1)-ES
-                xmin, fmin, fhistory, shistory = OnePlusOneEvolutionStrategy_mixed(dim, lb, ub, budget, func=f)
+                xmin, fmin, fhistory, shistory = OnePlusOneEvolutionStrategy(dim, lb, ub, budget, func=f)
 
                 # Post-process: Round the integer components (the first N variables)
                 xx = np.array([xmin[i] if i < N else np.round(xmin[i]) for i in range(len(xmin))])
                 fmin_scalar = np.array(fmin).item()
-
+                
                 # Update best score for this (dim, cond) combination
                 if fmin_scalar < best_scores[best_score_key]:
                     best_scores[best_score_key] = fmin_scalar
-
-                print(
-                    f"  Run {k}: fmin = {fmin_scalar:.4e} | Evals = {len(fhistory)} | Best so far = {best_scores[best_score_key]:.4e}")
+                
+                print(f"  Run {k}: fmin = {fmin_scalar:.4e} | Evals = {len(fhistory)} | Best so far = {best_scores[best_score_key]:.4e}")
 
     # Print final best scores for all 9 runs
-    print("\n" + "=" * 50)
+    print("\n" + "="*50)
     print("FINAL BEST SCORES FOR EACH OF THE 9 RUNS:")
-    print("=" * 50)
+    print("="*50)
     for key, score in best_scores.items():
         print(f"{key}: {score:.4e}")
-    print("=" * 50)
+    print("="*50)
 
     # //// EOF ////
