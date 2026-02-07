@@ -1,75 +1,46 @@
-
+# -*- coding: utf-8 -*-
+"""
+@author: ofersh@telhai.ac.il
+(1+1)-Evolution Strategy with the 1/5th success-rule initialized within [lb,ub]**n
+The objective function evaluation calls are adjusted to the ObjectiveFunctoin interface.
+"""
 import numpy as np
 import pandas as pd
 from MixedVariableObjectiveFunctions import setC
 import MixedVariableObjectiveFunctions as f_mixed
 import ellipsoidFunctions as Efunc
 
-
-def mutated_proposal(xmin, sigma, n_r, n_z, local_state):
-    # n_r is the number of real variables, n_z is the number of integers
-    # Real part: Gaussian mutation
-    r_mutation = local_state.normal(0, sigma, size=n_r)
-
-    # Integer part: Discrete mutation (e.g., using a discrete distribution)
-    # This ensures we move specifically on the integer grid
-    z_mutation = local_state.geometric(p=0.5, size=n_z) - local_state.geometric(p=0.5, size=n_z)
-
-    # Combine them
-    return np.concatenate([xmin[:n_r] + r_mutation, xmin[n_r:] + z_mutation])
-
-
-def OnePlusOneEvolutionStrategy_mixed(n, lb, ub, maxEvals, func, fstop=0, seed=None):
+def OnePlusOneEvolutionStrategy(n, lb, ub, maxEvals , func=lambda x: x.dot(x), fstop=0, seed = None) :
     local_state = np.random.RandomState(seed)
-    fhistory, shistory = [], []
-
-    # Define the split point: half are real (nr), half are integer (nz) [cite: 12, 21]
-    nr = n // 2
-    nz = n - nr
-
-    # Initialize: Random uniform within bounds [cite: 33, 43]
-    xmin = local_state.uniform(size=n) * (ub - lb) + lb
-    # Ensure the integer half starts as integers [cite: 20]
-    xmin[nr:] = np.round(xmin[nr:])
-
-    fmin = func(xmin.reshape(1, -1))
+    fhistory,shistory = [],[]
+    xmin = local_state.uniform(size=n)*(ub - lb) + lb
+    fmin = func(xmin.reshape(1,-1)) #reshape since it is a singleton and func receives a population in a 2D numpy array
     fhistory.append(fmin)
-
-    sigma = (ub - lb) / 6.0
+    sigma = (ub-lb)/6.0
     shistory.append(sigma)
-    evalcount, osuccess = 0, 0
-    tol, epoch, k_sigma = 1e-6, 50, 0.827
-
-    while (evalcount < maxEvals and fmin > fstop + tol):
-        # --- CALL THE DIFFERENTIATED MUTATION HERE ---
-        # We pass the split sizes nr and nz to handle them differently [cite: 41]
-        x_proposal = mutated_proposal(xmin, sigma, nr, nz, local_state)
-
-        # Evaluate the specific mixed-variable proposal
-        f_x = func(x_proposal.reshape(1, -1))
+    evalcount,osuccess = 0,0
+    tol = 1e-6
+    epoch = 50
+    k_sigma = 0.827
+    while (evalcount < maxEvals and fmin > fstop+tol) :
+        x = xmin + sigma*local_state.normal(size=n)
+        f_x = func(x.reshape(1,-1)) #reshape since it is a singleton and func receives a population in a 2D numpy array
         evalcount += 1
-
-        # Selection step
-        if f_x < fmin:
-            xmin = np.copy(x_proposal)
+        if f_x < fmin :
+            xmin = np.copy(x)
             fmin = f_x
             osuccess += 1
-
-        # 1/5th success-rule adaptation [cite: 22]
-        if (np.mod(evalcount, epoch) == 0):
-            ps = osuccess / epoch
-            if ps < 0.2:
+        if (np.mod(evalcount,epoch)==0) : # 1/5th success-rule every epoch
+            ps = osuccess/epoch
+            if (ps < 0.2) :
                 sigma *= k_sigma
-            elif ps > 0.2:
+            elif (ps > 0.2) :
                 sigma /= k_sigma
-            osuccess = 0
-
+            osuccess = 0;
+#        
         fhistory.append(fmin)
         shistory.append(sigma)
-
-    return xmin, fmin, fhistory, shistory
-
-
+    return xmin,fmin,fhistory,shistory
 #
 """
 The following __main__ function applies the (1+1)-ES to 9 instances of the mixed-integer quadratic function "RotatedEllipse".
@@ -88,7 +59,7 @@ if __name__ == "__main__":
     dimension = [10, 30, 80]
     conditioning = [1, 100, 10000]
     best_scores = {}  # Dictionary to store best scores for each (dim, cond) combination
-    
+
     for dim in dimension:
         N = dim // 2
         setC(N)
@@ -109,19 +80,20 @@ if __name__ == "__main__":
                 # Post-process: Round the integer components (the first N variables)
                 xx = np.array([xmin[i] if i < N else np.round(xmin[i]) for i in range(len(xmin))])
                 fmin_scalar = np.array(fmin).item()
-                
+
                 # Update best score for this (dim, cond) combination
                 if fmin_scalar < best_scores[best_score_key]:
                     best_scores[best_score_key] = fmin_scalar
-                
-                print(f"  Run {k}: fmin = {fmin_scalar:.4e} | Evals = {len(fhistory)} | Best so far = {best_scores[best_score_key]:.4e}")
+
+                print(
+                    f"  Run {k}: fmin = {fmin_scalar:.4e} | Evals = {len(fhistory)} | Best so far = {best_scores[best_score_key]:.4e}")
 
     # Print final best scores for all 9 runs
-    print("\n" + "="*50)
+    print("\n" + "=" * 50)
     print("FINAL BEST SCORES FOR EACH OF THE 9 RUNS:")
-    print("="*50)
+    print("=" * 50)
     for key, score in best_scores.items():
         print(f"{key}: {score:.4e}")
-    print("="*50)
+    print("=" * 50)
 
     # //// EOF ////
