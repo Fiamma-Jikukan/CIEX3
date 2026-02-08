@@ -1,0 +1,303 @@
+Running: Dim=10, Cond=1
+  Run 0: fmin = 4.2170e+00 | Evals = 1000001 | Best so far = 4.2170e+00
+  Run 1: fmin = 1.5674e+00 | Evals = 1000001 | Best so far = 1.5674e+00
+  Run 2: fmin = 9.2590e-01 | Evals = 1000001 | Best so far = 9.2590e-01
+  Run 3: fmin = 4.7808e-01 | Evals = 1000001 | Best so far = 4.7808e-01
+  Run 4: fmin = 2.4938e+00 | Evals = 1000001 | Best so far = 4.7808e-01
+  Run 5: fmin = 6.3547e-01 | Evals = 1000001 | Best so far = 4.7808e-01
+  Run 6: fmin = 4.3255e-01 | Evals = 1000001 | Best so far = 4.3255e-01
+  Run 7: fmin = 1.0953e+00 | Evals = 1000001 | Best so far = 4.3255e-01
+  Run 8: fmin = 2.0469e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 9: fmin = 8.4790e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 10: fmin = 1.2485e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 11: fmin = 1.6179e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 12: fmin = 3.8010e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 13: fmin = 1.2164e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 14: fmin = 5.5268e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 15: fmin = 4.2807e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 16: fmin = 1.6109e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 17: fmin = 1.5107e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 18: fmin = 1.4201e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 19: fmin = 2.5101e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 20: fmin = 1.2714e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 21: fmin = 1.1499e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 22: fmin = 3.0427e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 23: fmin = 8.1492e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 24: fmin = 1.7780e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 25: fmin = 4.1235e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 26: fmin = 1.4701e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 27: fmin = 2.4730e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 28: fmin = 1.9212e+00 | Evals = 1000001 | Best so far = 2.0469e-01
+  Run 29: fmin = 2.1026e-01 | Evals = 1000001 | Best so far = 2.0469e-01
+
+Running: Dim=10, Cond=100
+  Run 0: fmin = 4.2651e+01 | Evals = 1000001 | Best so far = 4.2651e+01
+  Run 1: fmin = 9.8423e-01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 2: fmin = 4.9936e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 3: fmin = 2.1441e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 4: fmin = 8.6622e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 5: fmin = 8.1244e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 6: fmin = 5.3741e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 7: fmin = 2.3698e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 8: fmin = 4.6596e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 9: fmin = 2.2819e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 10: fmin = 1.8022e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 11: fmin = 7.1445e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 12: fmin = 1.9306e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 13: fmin = 1.4591e+02 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 14: fmin = 5.4483e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 15: fmin = 8.3399e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 16: fmin = 2.6242e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 17: fmin = 2.7061e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 18: fmin = 2.6614e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 19: fmin = 1.2144e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 20: fmin = 4.3594e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 21: fmin = 7.9543e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 22: fmin = 2.0702e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 23: fmin = 7.3070e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 24: fmin = 4.1312e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 25: fmin = 2.8816e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 26: fmin = 3.8225e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 27: fmin = 1.3396e+00 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 28: fmin = 1.0680e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+  Run 29: fmin = 1.7952e+01 | Evals = 1000001 | Best so far = 9.8423e-01
+
+Running: Dim=10, Cond=10000
+  Run 0: fmin = 1.4873e+00 | Evals = 1000001 | Best so far = 1.4873e+00
+  Run 1: fmin = 1.1541e+00 | Evals = 1000001 | Best so far = 1.1541e+00
+  Run 2: fmin = 1.6383e+00 | Evals = 1000001 | Best so far = 1.1541e+00
+  Run 3: fmin = 2.5299e+00 | Evals = 1000001 | Best so far = 1.1541e+00
+  Run 4: fmin = 3.5530e-01 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 5: fmin = 1.3135e+01 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 6: fmin = 8.5683e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 7: fmin = 1.4833e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 8: fmin = 3.4207e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 9: fmin = 9.5837e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 10: fmin = 2.6361e+01 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 11: fmin = 1.3216e+01 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 12: fmin = 7.5352e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 13: fmin = 1.8014e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 14: fmin = 2.8723e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 15: fmin = 1.2751e+01 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 16: fmin = 1.8003e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 17: fmin = 1.0820e+01 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 18: fmin = 2.0143e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 19: fmin = 3.0647e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 20: fmin = 1.7706e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 21: fmin = 8.0752e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 22: fmin = 7.1695e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 23: fmin = 2.0215e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 24: fmin = 2.9526e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 25: fmin = 1.4519e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 26: fmin = 7.9981e-01 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 27: fmin = 3.7338e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 28: fmin = 2.6778e+00 | Evals = 1000001 | Best so far = 3.5530e-01
+  Run 29: fmin = 2.5426e+01 | Evals = 1000001 | Best so far = 3.5530e-01
+
+Running: Dim=30, Cond=1
+  Run 0: fmin = 6.5269e+01 | Evals = 1000001 | Best so far = 6.5269e+01
+  Run 1: fmin = 6.2657e+01 | Evals = 1000001 | Best so far = 6.2657e+01
+  Run 2: fmin = 1.2411e+02 | Evals = 1000001 | Best so far = 6.2657e+01
+  Run 3: fmin = 4.5755e+01 | Evals = 1000001 | Best so far = 4.5755e+01
+  Run 4: fmin = 5.8293e+01 | Evals = 1000001 | Best so far = 4.5755e+01
+  Run 5: fmin = 6.6383e+01 | Evals = 1000001 | Best so far = 4.5755e+01
+  Run 6: fmin = 7.3288e+01 | Evals = 1000001 | Best so far = 4.5755e+01
+  Run 7: fmin = 8.0882e+01 | Evals = 1000001 | Best so far = 4.5755e+01
+  Run 8: fmin = 5.7864e+01 | Evals = 1000001 | Best so far = 4.5755e+01
+  Run 9: fmin = 6.1407e+01 | Evals = 1000001 | Best so far = 4.5755e+01
+  Run 10: fmin = 7.2816e+01 | Evals = 1000001 | Best so far = 4.5755e+01
+  Run 11: fmin = 4.4116e+01 | Evals = 1000001 | Best so far = 4.4116e+01
+  Run 12: fmin = 1.1968e+02 | Evals = 1000001 | Best so far = 4.4116e+01
+  Run 13: fmin = 3.7034e+01 | Evals = 1000001 | Best so far = 3.7034e+01
+  Run 14: fmin = 5.1125e+01 | Evals = 1000001 | Best so far = 3.7034e+01
+  Run 15: fmin = 1.0281e+02 | Evals = 1000001 | Best so far = 3.7034e+01
+  Run 16: fmin = 4.7008e+01 | Evals = 1000001 | Best so far = 3.7034e+01
+  Run 17: fmin = 3.5190e+01 | Evals = 1000001 | Best so far = 3.5190e+01
+  Run 18: fmin = 3.3394e+01 | Evals = 1000001 | Best so far = 3.3394e+01
+  Run 19: fmin = 7.5473e+01 | Evals = 1000001 | Best so far = 3.3394e+01
+  Run 20: fmin = 2.0376e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 21: fmin = 5.3494e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 22: fmin = 7.5766e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 23: fmin = 9.6282e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 24: fmin = 5.8923e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 25: fmin = 5.9772e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 26: fmin = 4.4188e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 27: fmin = 6.5100e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 28: fmin = 3.9659e+01 | Evals = 1000001 | Best so far = 2.0376e+01
+  Run 29: fmin = 1.3300e+02 | Evals = 1000001 | Best so far = 2.0376e+01
+
+Running: Dim=30, Cond=100
+  Run 0: fmin = 5.4631e+01 | Evals = 1000001 | Best so far = 5.4631e+01
+  Run 1: fmin = 2.6395e+02 | Evals = 1000001 | Best so far = 5.4631e+01
+  Run 2: fmin = 2.9900e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 3: fmin = 5.7933e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 4: fmin = 2.4134e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 5: fmin = 1.1107e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 6: fmin = 4.7075e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 7: fmin = 1.5178e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 8: fmin = 1.3847e+03 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 9: fmin = 2.1414e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 10: fmin = 9.1566e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 11: fmin = 1.4080e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 12: fmin = 4.7776e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 13: fmin = 3.4927e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 14: fmin = 3.0019e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 15: fmin = 6.3020e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 16: fmin = 8.4186e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 17: fmin = 2.0020e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 18: fmin = 9.3380e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 19: fmin = 3.2249e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 20: fmin = 1.8756e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 21: fmin = 6.9786e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 22: fmin = 5.2044e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 23: fmin = 1.4723e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 24: fmin = 1.9534e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 25: fmin = 9.3465e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 26: fmin = 3.1616e+01 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 27: fmin = 3.4690e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 28: fmin = 5.8344e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+  Run 29: fmin = 2.8663e+02 | Evals = 1000001 | Best so far = 2.9900e+01
+
+Running: Dim=30, Cond=10000
+  Run 0: fmin = 2.1531e+02 | Evals = 1000001 | Best so far = 2.1531e+02
+  Run 1: fmin = 9.9356e+01 | Evals = 1000001 | Best so far = 9.9356e+01
+  Run 2: fmin = 1.2435e+02 | Evals = 1000001 | Best so far = 9.9356e+01
+  Run 3: fmin = 1.4302e+02 | Evals = 1000001 | Best so far = 9.9356e+01
+  Run 4: fmin = 2.3167e+02 | Evals = 1000001 | Best so far = 9.9356e+01
+  Run 5: fmin = 6.0491e+01 | Evals = 1000001 | Best so far = 6.0491e+01
+  Run 6: fmin = 8.3650e+01 | Evals = 1000001 | Best so far = 6.0491e+01
+  Run 7: fmin = 6.9705e+01 | Evals = 1000001 | Best so far = 6.0491e+01
+  Run 8: fmin = 5.7803e+01 | Evals = 1000001 | Best so far = 5.7803e+01
+  Run 9: fmin = 9.0500e+01 | Evals = 1000001 | Best so far = 5.7803e+01
+  Run 10: fmin = 7.1798e+01 | Evals = 1000001 | Best so far = 5.7803e+01
+  Run 11: fmin = 1.0324e+02 | Evals = 1000001 | Best so far = 5.7803e+01
+  Run 12: fmin = 3.5432e+02 | Evals = 1000001 | Best so far = 5.7803e+01
+  Run 13: fmin = 1.0933e+02 | Evals = 1000001 | Best so far = 5.7803e+01
+  Run 14: fmin = 7.3654e+01 | Evals = 1000001 | Best so far = 5.7803e+01
+  Run 15: fmin = 8.6429e+01 | Evals = 1000001 | Best so far = 5.7803e+01
+  Run 16: fmin = 3.2148e+01 | Evals = 1000001 | Best so far = 3.2148e+01
+  Run 17: fmin = 5.6065e+01 | Evals = 1000001 | Best so far = 3.2148e+01
+  Run 18: fmin = 9.8877e+01 | Evals = 1000001 | Best so far = 3.2148e+01
+  Run 19: fmin = 8.6690e+01 | Evals = 1000001 | Best so far = 3.2148e+01
+  Run 20: fmin = 2.1273e+02 | Evals = 1000001 | Best so far = 3.2148e+01
+  Run 21: fmin = 6.1319e+01 | Evals = 1000001 | Best so far = 3.2148e+01
+  Run 22: fmin = 1.2992e+02 | Evals = 1000001 | Best so far = 3.2148e+01
+  Run 23: fmin = 1.7706e+01 | Evals = 1000001 | Best so far = 1.7706e+01
+  Run 24: fmin = 2.7707e+02 | Evals = 1000001 | Best so far = 1.7706e+01
+  Run 25: fmin = 4.3103e+01 | Evals = 1000001 | Best so far = 1.7706e+01
+  Run 26: fmin = 3.8232e+01 | Evals = 1000001 | Best so far = 1.7706e+01
+  Run 27: fmin = 3.5510e+01 | Evals = 1000001 | Best so far = 1.7706e+01
+  Run 28: fmin = 1.5576e+02 | Evals = 1000001 | Best so far = 1.7706e+01
+  Run 29: fmin = 7.0766e+01 | Evals = 1000001 | Best so far = 1.7706e+01
+
+Running: Dim=80, Cond=1
+  Run 0: fmin = 1.4367e+03 | Evals = 1000001 | Best so far = 1.4367e+03
+  Run 1: fmin = 9.6765e+02 | Evals = 1000001 | Best so far = 9.6765e+02
+  Run 2: fmin = 1.0585e+03 | Evals = 1000001 | Best so far = 9.6765e+02
+  Run 3: fmin = 1.1110e+03 | Evals = 1000001 | Best so far = 9.6765e+02
+  Run 4: fmin = 1.1248e+03 | Evals = 1000001 | Best so far = 9.6765e+02
+  Run 5: fmin = 1.0912e+03 | Evals = 1000001 | Best so far = 9.6765e+02
+  Run 6: fmin = 1.1182e+03 | Evals = 1000001 | Best so far = 9.6765e+02
+  Run 7: fmin = 9.6613e+02 | Evals = 1000001 | Best so far = 9.6613e+02
+  Run 8: fmin = 8.3620e+02 | Evals = 1000001 | Best so far = 8.3620e+02
+  Run 9: fmin = 9.9851e+02 | Evals = 1000001 | Best so far = 8.3620e+02
+  Run 10: fmin = 7.1347e+02 | Evals = 1000001 | Best so far = 7.1347e+02
+  Run 11: fmin = 6.9184e+02 | Evals = 1000001 | Best so far = 6.9184e+02
+  Run 12: fmin = 9.1080e+02 | Evals = 1000001 | Best so far = 6.9184e+02
+  Run 13: fmin = 1.0663e+03 | Evals = 1000001 | Best so far = 6.9184e+02
+  Run 14: fmin = 1.4662e+03 | Evals = 1000001 | Best so far = 6.9184e+02
+  Run 15: fmin = 8.0925e+02 | Evals = 1000001 | Best so far = 6.9184e+02
+  Run 16: fmin = 5.5248e+02 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 17: fmin = 9.9441e+02 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 18: fmin = 8.8968e+02 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 19: fmin = 1.1580e+03 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 20: fmin = 1.1685e+03 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 21: fmin = 1.0953e+03 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 22: fmin = 1.1689e+03 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 23: fmin = 1.5413e+03 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 24: fmin = 7.5815e+02 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 25: fmin = 1.1549e+03 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 26: fmin = 6.6189e+02 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 27: fmin = 1.4730e+03 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 28: fmin = 8.3347e+02 | Evals = 1000001 | Best so far = 5.5248e+02
+  Run 29: fmin = 1.1872e+03 | Evals = 1000001 | Best so far = 5.5248e+02
+
+Running: Dim=80, Cond=100
+  Run 0: fmin = 6.1564e+02 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 1: fmin = 1.4598e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 2: fmin = 1.0820e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 3: fmin = 1.1520e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 4: fmin = 1.4765e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 5: fmin = 1.2342e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 6: fmin = 1.5524e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 7: fmin = 8.4599e+02 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 8: fmin = 1.0764e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 9: fmin = 1.3491e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 10: fmin = 1.3401e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 11: fmin = 1.3397e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 12: fmin = 1.1223e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 13: fmin = 1.6127e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 14: fmin = 1.6601e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 15: fmin = 1.0707e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 16: fmin = 2.1433e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 17: fmin = 1.2181e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 18: fmin = 2.0821e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 19: fmin = 1.9015e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 20: fmin = 1.3581e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 21: fmin = 1.4517e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 22: fmin = 1.2902e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 23: fmin = 6.4958e+02 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 24: fmin = 1.1361e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 25: fmin = 9.2703e+02 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 26: fmin = 1.2493e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 27: fmin = 1.1010e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 28: fmin = 1.9921e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+  Run 29: fmin = 1.1524e+03 | Evals = 1000001 | Best so far = 6.1564e+02
+
+Running: Dim=80, Cond=10000
+  Run 0: fmin = 8.2245e+02 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 1: fmin = 8.6939e+02 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 2: fmin = 1.4119e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 3: fmin = 1.4925e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 4: fmin = 8.9555e+02 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 5: fmin = 1.4345e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 6: fmin = 1.3014e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 7: fmin = 1.8546e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 8: fmin = 1.3133e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 9: fmin = 1.1391e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 10: fmin = 1.2299e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 11: fmin = 1.0696e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 12: fmin = 1.1925e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 13: fmin = 9.1323e+02 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 14: fmin = 1.5048e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 15: fmin = 1.7583e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 16: fmin = 9.5838e+02 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 17: fmin = 1.4914e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 18: fmin = 1.6771e+03 | Evals = 1000001 | Best so far = 8.2245e+02
+  Run 19: fmin = 6.8522e+02 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 20: fmin = 1.6778e+03 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 21: fmin = 9.5612e+02 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 22: fmin = 1.1823e+03 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 23: fmin = 1.2455e+03 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 24: fmin = 1.0888e+03 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 25: fmin = 8.9854e+02 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 26: fmin = 1.1001e+03 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 27: fmin = 1.4132e+03 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 28: fmin = 1.8582e+03 | Evals = 1000001 | Best so far = 6.8522e+02
+  Run 29: fmin = 1.5706e+03 | Evals = 1000001 | Best so far = 6.8522e+02
+
+==================================================
+FINAL BEST SCORES FOR EACH OF THE 9 RUNS:
+==================================================
+dim10_cond1: 2.0469e-01
+dim10_cond100: 9.8423e-01
+dim10_cond10000: 3.5530e-01
+dim30_cond1: 2.0376e+01
+dim30_cond100: 2.9900e+01
+dim30_cond10000: 1.7706e+01
+dim80_cond1: 5.5248e+02
+dim80_cond100: 6.1564e+02
+dim80_cond10000: 6.8522e+02
+==================================================
+
+Process finished with exit code 0

@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
             for k in range(NRUNS):
                 # Execute (1+1)-ES
-                xmin, fmin, fhistory, shistory = OnePlusOneEvolutionStrategy_mixed(dim, lb, ub, budget, func=f)
+                xmin, fmin, fhistory, shistory = OnePlusOneEvolutionStrategy(dim, lb, ub, budget, func=f)
 
                 # Post-process: Round the integer components (the first N variables)
                 xx = np.array([xmin[i] if i < N else np.round(xmin[i]) for i in range(len(xmin))])
