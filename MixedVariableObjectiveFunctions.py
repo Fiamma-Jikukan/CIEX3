@@ -67,8 +67,7 @@ class MixedVarsEllipsoid(ObjectiveFunction):
         evals = np.full(len(X), np.nan)
         for k in range(len(X)):
             y = np.array([X[k, i] for i in range(0, self.N)])  # Real-Valued sub-vector
-            z = np.array(
-                [np.round(X[k, i]) for i in range(self.N, self.d)])  # Integers sub-vector; rounding is enforced
+            z = np.array([np.round(X[k, i]) for i in range(self.N, self.d)])  # Integers sub-vector; rounding is enforced
             xc = np.concatenate((y, z))
             evals[k] = (np.array(xc - c0).dot(self.H).dot(np.array(xc - c0))) / self.c  # The normalized
         self._update_best_eval(evals)
