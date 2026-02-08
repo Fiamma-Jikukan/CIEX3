@@ -111,11 +111,11 @@ def MuLambdaEvolutionStrategy_mixed(n, lb, ub, maxEvals, func, mu=15, lmbda=100,
     return population[0], fmin, fhistory, shistory
 
 """
-The following __main__ function applies the (1+1)-ES to 9 instances of the mixed-integer quadratic function "RotatedEllipse".
-The ES does not handle the integer constraint in a particular manner, but lets the objective function evaluation *round* the values 
+The following _main_ function applies the (1+1)-ES to 9 instances of the mixed-integer quadratic function "RotatedEllipse".
+The ES does not handle the integer constraint in a particular manner, but lets the objective function evaluation round the values 
 to the nearest integer. The experimental setup runs the ES NRUNS times on each of the 3 problem instances over 3 dimensions.
 """
-if __name__ == "__main__":
+if _name_ == "_main_":
     objFunc = "MixedVarsEllipsoid"
     funcName = 'genRotatedHellipse'
     lb, ub = -100, 100
