@@ -224,7 +224,6 @@ if __name__ == "__main__":
 
             # Plot using the reconstructed x-axis and the 1D history
             plt.semilogy(eval_counts, best_run_history, label='Best Run Convergence')
-
             plt.title(f"Convergence Plot: Dim {dim}, Cond {c}")
             plt.xlabel("Objective Function Calls")
             plt.ylabel("Best Fitness (fmin)")
