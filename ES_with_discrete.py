@@ -238,4 +238,4 @@ if __name__ == "__main__":
     print("=" * 70)
     for key, val in final_stats.items():
         print(f"{key:<20} | {val['best']:15.4e} | {val['avg']:15.4e}")
-    print("=" * 70)
+    print("=" * 71)

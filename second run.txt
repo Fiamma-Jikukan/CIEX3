@@ -301,4 +301,4 @@ dim80_cond100        |      7.5858e-01 |      1.0719e+00
 dim80_cond10000      |      1.3967e+00 |      3.5542e+00
 ======================================================================
 
-Process finished with exit code 0
+Process finished with exit code 0x
