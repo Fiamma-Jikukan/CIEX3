@@ -33,7 +33,7 @@ def OnePlusOneEvolutionStrategy(n, lb, ub, maxEvals , func=lambda x: x.dot(x), f
                 sigma *= k_sigma
             elif (ps > 0.2) :
                 sigma /= k_sigma
-            osuccess = 0;
+            osuccess = 0
 #        
         fhistory.append(fmin)
         shistory.append(sigma)
@@ -73,7 +73,6 @@ if __name__ == "__main__":
             f = eval(f'f_mixed.{objFunc}')(d=dim, bid=0, ind=N, H=H, c=c, max_eval=budget)
 
             for k in range(NRUNS):
-                # Reset internal evaluation counter if the class supports it
                 f.eval_count = 0
 
                 xmin, fmin, fhistory,_ = OnePlusOneEvolutionStrategy(dim, lb, ub, budget, func=f)
@@ -91,17 +90,10 @@ if __name__ == "__main__":
             avg_fmin = np.mean(all_final_fmin)
             final_stats[best_score_key] = {"best": best_scores[best_score_key], "avg": avg_fmin}
 
-            # --- Generate Graph for this configuration ---
             plt.figure(figsize=(8, 5))
 
-            # Reconstruct the evaluation counts for the x-axis
-            # First point is 'mu', subsequent points are 'mu + lmbda * gen'
-            mu_val = 15
-            lmbda_val = 100
-            eval_counts = [mu_val] + [mu_val + (i + 1) * lmbda_val for i in range(len(best_run_history) - 1)]
-
             # Plot using the reconstructed x-axis and the 1D history
-            plt.semilogy(eval_counts, best_run_history, label='Best Run Convergence')
+            plt.semilogy([i for i in range(len(best_run_history))], best_run_history, label='Best Run Convergence')
             plt.title(f"Convergence Plot: Dim {dim}, Cond {c}")
             plt.xlabel("Objective Function Calls")
             plt.ylabel("Best Fitness (fmin)")
