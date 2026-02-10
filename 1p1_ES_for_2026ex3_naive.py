@@ -68,7 +68,7 @@ if __name__ == "__main__":
             all_final_fmin = []
             best_run_history = None
 
-            # Setup Objective Function [cite: 22, 23]
+            # Setup Objective Function
             H = eval(f'Efunc.{funcName}')(dim, c)
             f = eval(f'f_mixed.{objFunc}')(d=dim, bid=0, ind=N, H=H, c=c, max_eval=budget)
 

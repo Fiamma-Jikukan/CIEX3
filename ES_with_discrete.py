@@ -12,7 +12,6 @@ def validate_bounds(vector, lb=-100, ub=100):
 
 def handle_real_part(xr, sigma, local_state):
     """Gaussian mutation for continuous variables."""
-    # gaussian noise to add to the real part
     r_mutated = xr + sigma * local_state.normal(size=len(xr))
     return validate_bounds(r_mutated)
 
@@ -158,7 +157,7 @@ if __name__ == "__main__":
     dimension = [10, 30, 80]
     conditioning = [1, 100, 10000]
 
-    # store best/avg per configuration for final table
+    # store best and avg per configuration for final table
     final_stats = {}
 
     for dim in dimension:
