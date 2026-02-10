@@ -1,14 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
-@author: ofersh@telhai.ac.il
-(1+1)-Evolution Strategy with the 1/5th success-rule initialized within [lb,ub]**n
-The objective function evaluation calls are adjusted to the ObjectiveFunctoin interface.
-"""
+
 import numpy as np
 import pandas as pd
 from MixedVariableObjectiveFunctions import setC
 import MixedVariableObjectiveFunctions as f_mixed
 import ellipsoidFunctions as Efunc
+import matplotlib.pyplot as plt
+
 
 def OnePlusOneEvolutionStrategy(n, lb, ub, maxEvals , func=lambda x: x.dot(x), fstop=0, seed = None) :
     local_state = np.random.RandomState(seed)
@@ -51,49 +48,72 @@ if __name__ == "__main__":
     objFunc = "MixedVarsEllipsoid"
     funcName = 'genRotatedHellipse'
     lb, ub = -100, 100
-    #
     budget = 1e6
     NRUNS = 30
-    results_list = []
-    #
+
     dimension = [10, 30, 80]
     conditioning = [1, 100, 10000]
-    best_scores = {}  # Dictionary to store best scores for each (dim, cond) combination
+
+    # Storage for final summary
+    final_stats = {}
 
     for dim in dimension:
         N = dim // 2
         setC(N)
-        #
         for c in conditioning:
             print(f"\nRunning: Dim={dim}, Cond={c}")
             best_score_key = f"dim{dim}_cond{c}"
-            best_scores[best_score_key] = float('inf')  # Initialize with infinity
 
-            # Setup the objective function
+            best_scores = {best_score_key: float('inf')}
+            all_final_fmin = []
+            best_run_history = None
+
+            # Setup Objective Function [cite: 22, 23]
             H = eval(f'Efunc.{funcName}')(dim, c)
             f = eval(f'f_mixed.{objFunc}')(d=dim, bid=0, ind=N, H=H, c=c, max_eval=budget)
 
             for k in range(NRUNS):
-                # Execute (1+1)-ES
-                xmin, fmin, fhistory, shistory = OnePlusOneEvolutionStrategy(dim, lb, ub, budget, func=f)
+                # Reset internal evaluation counter if the class supports it
+                f.eval_count = 0
 
-                # Post-process: Round the integer components (the first N variables)
-                xx = np.array([xmin[i] if i < N else np.round(xmin[i]) for i in range(len(xmin))])
+                xmin, fmin, fhistory,_ = OnePlusOneEvolutionStrategy(dim, lb, ub, budget, func=f)
+
                 fmin_scalar = np.array(fmin).item()
+                all_final_fmin.append(fmin_scalar)
 
-                # Update best score for this (dim, cond) combination
                 if fmin_scalar < best_scores[best_score_key]:
                     best_scores[best_score_key] = fmin_scalar
+                    best_run_history = fhistory  # Save history of the best run for graphing
 
-                print(
-                    f"  Run {k}: fmin = {fmin_scalar:.4e} | Evals = {len(fhistory)} | Best so far = {best_scores[best_score_key]:.4e}")
+                print(f"  Run {k}: fmin = {fmin_scalar:.4e} | Evals = {f.eval_count} | Best so far = {best_scores[best_score_key]:.4e}")
 
-    # Print final best scores for all 9 runs
-    print("\n" + "=" * 50)
-    print("FINAL BEST SCORES FOR EACH OF THE 9 RUNS:")
-    print("=" * 50)
-    for key, score in best_scores.items():
-        print(f"{key}: {score:.4e}")
-    print("=" * 50)
+            # Calculate average for this configuration
+            avg_fmin = np.mean(all_final_fmin)
+            final_stats[best_score_key] = {"best": best_scores[best_score_key], "avg": avg_fmin}
 
-    # //// EOF ////
+            # --- Generate Graph for this configuration ---
+            plt.figure(figsize=(8, 5))
+
+            # Reconstruct the evaluation counts for the x-axis
+            # First point is 'mu', subsequent points are 'mu + lmbda * gen'
+            mu_val = 15
+            lmbda_val = 100
+            eval_counts = [mu_val] + [mu_val + (i + 1) * lmbda_val for i in range(len(best_run_history) - 1)]
+
+            # Plot using the reconstructed x-axis and the 1D history
+            plt.semilogy(eval_counts, best_run_history, label='Best Run Convergence')
+            plt.title(f"Convergence Plot: Dim {dim}, Cond {c}")
+            plt.xlabel("Objective Function Calls")
+            plt.ylabel("Best Fitness (fmin)")
+            plt.grid(True, which="both", linestyle='--', alpha=0.5)
+            plt.legend()
+            plt.tight_layout()
+            plt.show()
+
+    # --- Final Summary Print ---
+    print("\n" + "=" * 70)
+    print(f"{'Configuration':<20} | {'Best Score':<15} | {'Average Score (30 runs)':<15}")
+    print("=" * 70)
+    for key, val in final_stats.items():
+        print(f"{key:<20} | {val['best']:15.4e} | {val['avg']:15.4e}")
+    print("=" * 70)
